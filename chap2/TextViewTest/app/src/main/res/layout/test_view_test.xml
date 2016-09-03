@@ -75,4 +75,10 @@
         android:typeface="serif"
         android:inputType="phone"
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button" />
 </LinearLayout>
