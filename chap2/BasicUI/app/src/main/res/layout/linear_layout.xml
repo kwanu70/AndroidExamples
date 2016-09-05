@@ -17,17 +17,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button 1"
-            android:onClick="b1OnClick"
+            android:onClick="OnClickB1"
             android:id="@+id/button1" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button 2" />
+            android:text="Button 2"
+            android:layout_weight="1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button 3"
-            android:layout_weight="1"
+
         />
     </LinearLayout>
     <LinearLayout
@@ -35,7 +36,6 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_margin="10dp"
         android:background="#00aaff">
         <Button
             android:layout_width="wrap_content"
