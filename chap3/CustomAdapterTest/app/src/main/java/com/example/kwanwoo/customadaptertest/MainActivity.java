@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    static MyAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         data.add(new MyItem(R.drawable.sample_7, "Bob", "2"));
 
         //어댑터 생성
-        MyAdapter adapter = new MyAdapter(this, R.layout.item, data);
+        adapter = new MyAdapter(this, R.layout.item, data);
 
         //어댑터 연결
         ListView listView = (ListView)findViewById(R.id.listView);
