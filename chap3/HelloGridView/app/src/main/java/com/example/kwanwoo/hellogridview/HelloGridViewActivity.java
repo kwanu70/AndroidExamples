@@ -21,7 +21,8 @@ public class HelloGridViewActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(HelloGridViewActivity.this, "" + position,
+                Toast.makeText(HelloGridViewActivity.this,
+                        "" + (position+1)+ "번째 선택",
                         Toast.LENGTH_SHORT).show();
             }
         });
