@@ -141,7 +141,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        stopLocationUpdates();
+        if (mGoogleApiClient.isConnected())
+            stopLocationUpdates();
     }
 
     // It is a good practice to remove location requests when the activity is in a paused or
@@ -150,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         Log.i(TAG,"onStop, disconnect request");
-        stopLocationUpdates();
         mGoogleApiClient.disconnect();
         super.onStop();
     }
@@ -209,7 +209,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private  void stopLocationUpdates() {
-        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, mLocationListener);
+        if (mLocationListener != null && mGoogleApiClient != null)
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, mLocationListener);
     }
 
     private void setButtonsEnabledState() {
