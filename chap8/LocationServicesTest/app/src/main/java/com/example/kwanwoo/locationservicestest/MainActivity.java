@@ -173,9 +173,10 @@ public class MainActivity extends AppCompatActivity {
     public void startUpdatesButtonHandler(View view) {
         if (!mRequestingLocationUpdates) {
             if (mGoogleApiClient.isConnected() && isPermissionGranted()) {
+                mRequestingLocationUpdates = true;
                 setButtonsEnabledState();
                 startLocationUpdates();
-                mRequestingLocationUpdates = true;
+
             }
         }
     }
